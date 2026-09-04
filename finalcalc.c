@@ -11,6 +11,9 @@ int main() {
     printf("Enter 9 for grading system \n");
     printf("Enter 10 to check whether it is a number or not \n");
     printf("Enter 11 for temperature converter \n");
+    printf("Enter 12 for tables \n");
+    printf("Enter 13 to check whether number is prime or not \n");
+    printf("Enter 14 for factorial");
 
     int x;
     scanf("%d",&x);
@@ -165,6 +168,57 @@ int main() {
             printf("you have not entered correct options");
     
         }
+    }
+    else if(x==12)
+    {
+        printf("Enter a number for it's table: ");
+        int n;
+        scanf("%d",&n);
+
+        for(int i = 1; i <= 10; i++)
+        {
+            printf("%d \n",i * n);
+        }
+   
+    }
+    else if(x==13)
+    {
+        printf("enter a number: ");
+        int n;
+        scanf("%d",&n);
+
+        int count=0;
+
+        for(int i = 1; i <= n; i++)
+        {
+            if(n % i == 0)
+            {
+                count++;
+            }
+        }
+        if(count == 2)
+        {
+
+            printf("number is prime");
+        }
+
+        else
+        {
+            printf("not prime");
+        }
+    }
+    else if(x==14)
+    {
+        printf("enter a number: ");
+        int n;
+        int f = 1;
+        scanf("%d",&n);
+
+        for(int i = n ; i>=1 ; i--)
+        {
+            f=f*i;
+        }
+        printf("%d",f);
     }
 
 
